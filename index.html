@@ -1,0 +1,189 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아이스크림 쇼핑몰</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="./cssS/w3.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/800px-Apple_logo_black.svg.png">
+<style>
+  body{width:980px; margin : 0 auto;}
+   a { text-decoration: none;}
+   li { list-style : none;}
+   .w3-myfont {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+   }
+   .mySlides {display:none}
+   .w3-left, .w3-right, .w3-badge {cursor:pointer} 
+   .w3-badge {height:13px;width:13px;padding:0}
+   *{font-family: "나눔스퀘어", Arial, Helvetica, sans-serif;}
+header h1{display: inline;}
+header img {height: 60px;}
+ul {list-style-type: none;}
+a {text-decoration: none;}
+nav ul{
+    text-align: center; border-top: 2px solid #9400d3;
+    border-bottom: 2px solid #9400d3; padding: 15px 10px;
+}
+nav ul li {
+    display: inline;
+    padding: 10px 60px;
+    letter-spacing: 5px;
+}
+nav ul li:hover {
+    background-color: #9400d3;
+}
+ul li a:hover {
+    color: white;
+}
+header{
+    text-align: center;
+}
+section{
+    display: flex;
+}
+    article{
+        flex: 3;   
+    }
+    aside{
+        flex: 1;
+    }
+   
+</style>
+<script>
+    function login(){
+               let id = document.getElementById("id").value;
+               let pw = document.getElementById("pw").value;
+               if(id==="admin"){
+                   if(pw=="1234"){
+                       document.getElementById("login").innerHTML="<h2>" + id + 
+                          "님이 로그인하였습니다 </h2>"; 
+                   } else {
+                       alert("비밀번호를 확인하세요");
+                   }
+               }else{
+                   alert("회원가입을 하세요");
+               }
+           }
+           function w3_open(){
+               document.getElementById("mySidebar").style.display = "block";
+           }
+           function w3_close(){
+               document.getElementById("mySidebar").style.display = "none";
+           }
+</script>
+</head>
+<body class="w3-content w3-margin-top" style="max-width:950px">
+<header class="w3-margin-top w3-contaner">
+    <h1 style="color: purple" > Tyrol</h1>
+</header>
+<nav>
+  <div class="navi">
+	<ul class="w3-bar w3-center">
+		<li><a href="#AboutTyrol">AboutTyrol</a></li>
+        <li><a href="#MENU">MENU</a></li>
+        <li><a href="#Store">Store</a></li>
+        <li><a href="#Q&A">Q&A</a></li>
+	</ul>
+  </div>
+</nav>
+<div class="w3-cell-row">
+<section class="w3-left w3-container w3-margin-top w3-margin-bottom" style="max-width:700px" >
+	<article class="media" class="w3-row w3-large w3-margin-top">
+        <img width="900px" height="500px" src="./image/back.png" alt="back">
+        <div id="AboutTyrol">
+            <br> 
+         <h2 style="color: palevioletred">about Tyrol</h2>    
+        <img  width="930px" src="./image/djfodkfj.png" alt="djfodkfj">
+        <br>
+        </div>
+        <div id="MENU">
+            <h3 style="color: palevioletred">MENU</h3>
+        </div>
+        <div style="float: left; width: 30%;padding:1px;">
+        <img src="./image/mago.png" alt="mago"> 
+        </div>
+        <div style=" float: left; width: 30%;"></div>
+        <img src="./image/cherry.png" alt="cherry">
+        <div style="float: right; width: 30%;padding:1px;">
+        <img src="./image/friut.png" alt="friut">
+        <br><br><br><br>
+         </div>
+         <h1 style="color: plum">Store</h1>        
+        <div style="width: 65%; height: 250px; float: left;">
+        <img src="./image/map.png" alt="map">
+        </div>
+        <div style="width: 35%; height:250px; float: right;">
+       
+        <p>가게의 위치는 주로 학교 근처로 가게들이 있으며 </p> 
+        <p>주요 고객을 대학생을 위주로 한다</p>
+        <hr>
+        <p>Plone        82 010 3798 6510</p>
+        <p>Email        wych6510@naver.com</p>
+        <p></p>
+        <p>Open         02:00pm 08:00pm  mon-sat (sun off)</p>
+        </div>
+
+	</article>
+</section>
+<aside class="right" class="w3-container w3-cell">
+    <br><br>
+    <div class="login">
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-pale-green w3-large">Login</button>
+      
+        <div id="id01" class="w3-modal">
+          <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+      
+            <div class="w3-center"><br>
+              <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+              <img src="./images/mylife.jpg" alt="mylife" style="width:30%" class="w3-circle w3-margin-top">
+            </div>
+      
+            <form class="w3-container" action="/action_page.php">
+              <div class="w3-section">
+                <label><b>Username</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
+                <label><b>Password</b></label>
+                <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required>
+                <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Login</button>
+                <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+              </div>
+            </form>
+      
+            <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+              <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+              <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+    </div>
+</aside>
+<footer  class="w3-pale-red w3-margin-top"  style="height:150px;">
+  <div class="w3-row">
+	  <div class="w3-col s4  w3-container" >
+        <ul>
+            <li><a href="#AboutTyrol"> <i style="font-size:medium;">AboutTyrol</i></a></li>
+            <li><a href="#MENU"><i style="font-size: medium;">MENU</i></a></li>
+            <li><a href="#Store"><i style="font-size: medium;">Store</i></a></li>
+        </ul>
+	  </div>
+      <div class="w3-col s4 w3-container" >
+	    <br><br><br><br><br><br>
+        (c) 2021 ice cream shop
+    </div>
+    <div class="w3-col s4 w3-container" >
+        <br>
+        <a href="https://www.instagram.com/yeongu4501"><i class="fa fa-instagram" style="font-size:30px;color: purple"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100004822144924"><i class="fa fa-facebook" style="font-size:30px;color:purple"></i></a> 
+        <br>
+        <li style="color: purple">Phone: 010 3798 6510</li>
+        <li style="color: purple">Email: <a href="mailto:wych6510@naver.com" style="color: purple">wych6510@naver.com</a></li>    
+     </div> 
+   </footer>
+</body>
+
+</html>
